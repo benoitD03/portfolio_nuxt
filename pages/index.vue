@@ -13,11 +13,30 @@
           </template>
           <template v-slot:default="dialog">
             <v-card>
-              <v-toolbar color="primary" dark
-                >Opening from the bottom</v-toolbar
-              >
-              <v-card-text>
-                <div class="text-h2 pa-12">Hello world!</div>
+              <v-toolbar class="modal-header" color="#f1f1f1">
+                <Marquee />
+              </v-toolbar>
+              <v-card-text class="d-flex card-text">
+                <div class="mt-5 skills-card">
+                  <h4 class="mb-3 text-center"><span>F</span>rontend</h4>
+                  <v-divider></v-divider>
+                  <ul class="mt-3">
+                    <li>JavaScript</li>
+                    <li>Vue.js / Vuex / Vuetify</li>
+                    <li>Nuxt.js</li>
+                    <li>HTML / CSS / SCSS / Bottstrap</li>
+                  </ul>
+                </div>
+                <div class="mt-5 skills-card">
+                  <h4 class="mb-3 text-center"><span>B</span>ackend</h4>
+                  <v-divider></v-divider>
+                  <ul class="mt-3">
+                    <li>Node.js / Express</li>
+                    <li>MySQL</li>
+                    <li>MongoDB</li>
+                    <li>Sequelize</li>
+                  </ul>
+                </div>
               </v-card-text>
               <v-card-actions class="justify-end">
                 <v-btn text @click="dialog.value = false">Close</v-btn>
@@ -36,12 +55,24 @@
   </div>
 </template>
 
+<script>
+import Marquee from '../components/marquee'
+export default {
+  components: {
+    Marquee
+  }
+}
+</script>
+
 <style scoped>
 h1 {
   font-size: 90px;
 }
 h2 {
   font-size: 50px;
+}
+h4 {
+  font-size: 25px;
 }
 span {
   color: #3ebfa6;
@@ -51,11 +82,9 @@ span {
   justify-content: space-around;
   margin-top: 70px;
 }
-
 .button {
   font-size: 18px;
 }
-
 .home {
   width: 70%;
 }
@@ -64,5 +93,8 @@ span {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+.card-text {
+  justify-content: space-around;
 }
 </style>
