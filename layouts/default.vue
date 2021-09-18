@@ -5,10 +5,9 @@
       <v-container> 
         <Nuxt />
       </v-container>
-      <SocialLink />
     </v-main>
     <v-footer :absolute="!fixed" app>
-      <span>&copy; Benoit Durand</span>
+      <SocialLink />
     </v-footer>
   </v-app>
 </template>

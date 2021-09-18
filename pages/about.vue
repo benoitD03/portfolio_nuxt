@@ -1,5 +1,5 @@
 <template>
-  <h1>Page a propose !!!</h1>
+  <h1>Page a propos</h1>
 </template>
 
 <script>

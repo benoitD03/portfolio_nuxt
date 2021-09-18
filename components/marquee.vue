@@ -28,7 +28,7 @@ export default {
 .marquee-content {
     display: flex;
     list-style: none;
-    animation: scrolling 30s linear infinite;
+    animation: scrolling 20s linear infinite;
 }
 .marquee-item {
     width: auto;

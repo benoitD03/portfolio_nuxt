@@ -20,6 +20,13 @@
           <b>{{techno}}</b>    
       </span>
       </div>
+      <v-divider class="mt-9"></v-divider>
+      <h3 class="text-center my-9"><span>I</span>nformations supplémentaires</h3>
+      <div class="text-center links-container">
+          <a :href="project.github" target="_blank"><img class="projects-links" src="/github.png"/></a>
+          <a v-if="project.link" :href="project.link" target="_blank" class="ml-3"><img class="projects-links" src="/internet.png"/></a>
+      </div>
+      <v-divider class="mt-9"></v-divider>
     </div>
   </div>
 </template>
@@ -71,5 +78,10 @@ span {
 .techno {
     display: flex;
     justify-content: center;
+}
+.projects-links {
+  width: 50px;
+  height: 50px;
+  border-radius: 10px;
 }
 </style>

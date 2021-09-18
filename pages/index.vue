@@ -20,21 +20,21 @@
                 <div class="mt-5 skills-card">
                   <h4 class="mb-3 text-center"><span>F</span>rontend</h4>
                   <v-divider></v-divider>
-                  <ul class="mt-3">
-                    <li>JavaScript</li>
-                    <li>Vue.js / Vuex / Vuetify</li>
-                    <li>Nuxt.js</li>
-                    <li>HTML / CSS / SCSS / Bottstrap</li>
+                  <ul class="mt-3 pl-0">
+                    <li class="text-center">JavaScript</li>
+                    <li class="text-center">Vue.js / Vuex / Vuetify</li>
+                    <li class="text-center">Nuxt.js</li>
+                    <li class="text-center">HTML / CSS / SCSS / Bottstrap</li>
                   </ul>
                 </div>
                 <div class="mt-5 skills-card">
                   <h4 class="mb-3 text-center"><span>B</span>ackend</h4>
                   <v-divider></v-divider>
-                  <ul class="mt-3">
-                    <li>Node.js / Express</li>
-                    <li>MySQL</li>
-                    <li>MongoDB</li>
-                    <li>Sequelize</li>
+                  <ul class="mt-3 pl-0">
+                    <li class="text-center">Node.js / Express</li>
+                    <li class="text-center">MySQL</li>
+                    <li class="text-center">MongoDB</li>
+                    <li class="text-center">Sequelize</li>
                   </ul>
                 </div>
               </v-card-text>
@@ -96,5 +96,9 @@ span {
 }
 .card-text {
   justify-content: space-around;
+}
+li {
+  list-style-type: none;
+  color: #3ebfa6;
 }
 </style>
