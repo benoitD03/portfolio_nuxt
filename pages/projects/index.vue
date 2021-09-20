@@ -1,14 +1,16 @@
 <template>
   <div>
     <h1 class="text-center my-9"><span>R</span>éalisations</h1>
-    <v-carousel style="border-radius: 10px;" height="500" hide-delimiter-background show-arrows-on-hover>
+    <v-carousel style="border-radius: 10px;" height="100%" hide-delimiter-background>
       <v-carousel-item v-for="(project, id) in projects" :key="id">
         <v-sheet :project="project" height="100%" tile>
           
-            <h3 class="text-center my-6">{{ project.title }}</h3>
+            <h3 class="text-center mt-6">{{ project.title }}</h3>
             <div class="caroussel-content">
-            <NuxtLink align="center" class="text-center" :to="{name: 'projects-id', params: { id: project.id}}">
-              <img class="mt-10" :src="project.image" :alt="project.title" />  
+            <NuxtLink align="center" class="text-center mb-10" :to="{name: 'projects-id', params: { id: project.id}}">
+              <div class="img-container">
+              <img class="mt-8" :src="project.image" :alt="project.title" />  
+              </div>
             </NuxtLink>
             </div>
           
@@ -30,28 +32,37 @@ export default {
 
 <style scoped>
 a {
-  width: 70%;
+  width: 80%;
+}
+.img-container {
+  overflow: hidden;
+  border-radius: 5px;
 }
 img {
-  border-radius: 10px;
-  width: 70%;
-  -webkit-transition: all 1s ease; /* Safari et Chrome */
-  -moz-transition: all 1s ease; /* Firefox */
-  -ms-transition: all 1s ease; /* Internet Explorer 9 */
-  -o-transition: all 1s ease; /* Opera */
+  width: 100%;
+  height: 90%;
+  -webkit-transition: all 1s ease; 
+  -moz-transition: all 1s ease; 
+  -ms-transition: all 1s ease; 
+  -o-transition: all 1s ease; 
   transition: all 1s ease;
+  object-fit: cover;
+  border-radius: 5px;
+  filter: grayscale(.5);
 }
 img:hover {
-  -webkit-transform:scale(1.25); /* Safari et Chrome */
-  -moz-transform:scale(1.25); /* Firefox */
-  -ms-transform:scale(1.25); /* Internet Explorer 9 */
-  -o-transform:scale(1.25); /* Opera */
-  transform:scale(1.25);
+  -webkit-transform:scale(1.15); 
+  -moz-transform:scale(1.15); 
+  -ms-transform:scale(1.15); 
+  -o-transform:scale(1.15); 
+  transform:scale(1.15) rotateZ(2deg);
+  filter: grayscale(0);
 }
 h3 {
   background: #3ebfa6;
   font-size: 30px;
-  border-radius: 10px 10px 0 0 ;
+  border-radius: 5px;
+  box-shadow: -1px 2px 10px 3px rgba(0, 0, 0, 0.3) inset;
 }
 h1 {
   font-size: 45px;
@@ -62,8 +73,9 @@ span {
 .caroussel-content {
   display: flex;
   justify-content: center;
+  background: #121212;
 }
 .v-carousel__controls {
-  background: #3ebfa6 !important;
+  width: 100%;
 }
 </style>

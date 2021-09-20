@@ -7,9 +7,10 @@
       <div class="links-buttons">
         <v-dialog transition="dialog-bottom-transition" max-width="600">
           <template v-slot:activator="{ on, attrs }">
-            <v-btn v-bind="attrs" v-on="on" class="py-10 px-16 button"
-              ><b>Compétences</b></v-btn
-            >
+            <button v-bind="attrs" v-on="on" class="py-7 px-16 button-skills">
+              <span class="filling-skills"></span>
+              <b>Compétences</b>
+            </button>
           </template>
           <template v-slot:default="dialog">
             <v-card>
@@ -39,16 +40,17 @@
                 </div>
               </v-card-text>
               <v-card-actions class="justify-end">
-                <v-btn text @click="dialog.value = false">Close</v-btn>
+                <v-btn text @click="dialog.value = false">Fermer</v-btn>
               </v-card-actions>
             </v-card>
           </template>
         </v-dialog>
 
         <NuxtLink to="/projects">
-          <v-btn class="py-10 px-16 button" elevation="2"
-            ><b>Réalisations</b></v-btn
-          >
+          <button class="py-7 px-16 button-projects">
+            <span class="filling-projects"></span>
+            <b>Réalisations</b>
+          </button>
         </NuxtLink>
       </div>
     </div>
@@ -82,8 +84,37 @@ span {
   justify-content: space-around;
   margin-top: 70px;
 }
-.button {
+.button-projects, .button-skills {
   font-size: 18px;
+  border: 2px solid #f1f1f1;
+  position: relative;
+  color: #f1f1f1;
+}
+.filling-projects {
+  transition: all 0.5s ease-in 0s;
+  background-color: #3ebfa6;
+  width: 0;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  opacity: .6;
+}
+.button-projects:hover .filling-projects {
+    width: 100%;
+}
+.filling-skills {
+  transition: all 0.5s ease-in 0s;
+  background-color: #3ebfa6;
+  width: 0;
+  height: 100%;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  opacity: .6;
+}
+.button-skills:hover .filling-skills {
+    width: 100%;
 }
 .home {
   width: 70%;

@@ -1,14 +1,21 @@
 <template>
   <div>
+    <div class="back-link"> 
+        <NuxtLink to="/projects">
+            <span class="mdi mdi-36px mdi-arrow-left-bold-circle"></span>
+        </NuxtLink>
+    </div>
     <h1 class="text-center my-15">{{ project.title }}</h1>
-    <v-row>
-      <v-col cols="12" lg="6" sm="12" md="12">
-        <img :src="project.image" alt="project.title" />
-      </v-col>
-      <v-col cols="12" lg="6" md="12" sm="12">
-        <img :src="project.image" alt="project.title" />
-      </v-col>
-    </v-row>
+    <div class="text-center">
+        <v-row justify="center"> 
+        <v-col cols="12" lg="6" sm="12" md="12">
+            <img :src="project.image" alt="project.title" />
+        </v-col>
+        <v-col cols="12" lg="6" md="12" sm="12">
+            <img :src="project.image" alt="project.title" />
+        </v-col>
+        </v-row>
+    </div>
     <v-divider class="mt-9"></v-divider>
     <div class="text-container mt-9">
       <h3 class="text-center mb-9"><span>D</span>escription</h3>
@@ -55,11 +62,17 @@ export default {
 </script>
 
 <style scoped>
+.back-link {
+    position: absolute;
+    top: 2px;
+    left: 15px;
+}
 h1 {
   font-size: 40px;
   background: #3ebfa6;
   width: 100%;
   border-radius: 10px;
+   box-shadow: -1px 2px 10px 3px rgba(0, 0, 0, 0.3) inset;
 }
 h3 {
     font-size: 30px;
@@ -83,5 +96,9 @@ span {
   width: 50px;
   height: 50px;
   border-radius: 10px;
+  transition: all .4s ease-in-out;
+}
+.projects-links:hover {
+    transform: scale(.8);
 }
 </style>

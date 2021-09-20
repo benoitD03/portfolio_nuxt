@@ -2,13 +2,13 @@
   <v-app>
     <v-main>
       <Menu />
-      <v-container> 
+      <v-container class="pb-0 mb-0"> 
         <Nuxt />
       </v-container>
     </v-main>
-    <v-footer :absolute="!fixed" app>
+    <!-- <v-footer :absolute="!fixed" app  style="height: 50px;"> -->
       <SocialLink />
-    </v-footer>
+    <!-- </v-footer> -->
   </v-app>
 </template>
 
@@ -28,7 +28,7 @@ a {
   text-decoration: none;
 }
 .container {
-  height: 100%;
+  height: 90%;
 }
 
 </style>
