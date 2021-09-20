@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="mb-16">
     <div class="back-link"> 
         <NuxtLink to="/projects">
             <span class="mdi mdi-36px mdi-arrow-left-bold-circle"></span>
@@ -19,7 +19,7 @@
     <v-divider class="mt-9"></v-divider>
     <div class="text-container mt-9">
       <h3 class="text-center mb-9"><span>D</span>escription</h3>
-      <p>{{ project.description }}</p>
+      <p class="text-center" style="font-size: 20px">{{ project.description }}</p>
       <v-divider class="mt-9"></v-divider>
       <h3 class="text-center my-9"><span>S</span>tack technique</h3>
       <div class="techno"> 
@@ -91,6 +91,7 @@ span {
 .techno {
     display: flex;
     justify-content: center;
+    font-size: 20px;
 }
 .projects-links {
   width: 50px;

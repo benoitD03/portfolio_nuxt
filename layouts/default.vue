@@ -1,5 +1,5 @@
 <template>
-  <v-app>
+  <v-app id="app">
     <v-main>
       <Menu />
       <v-container class="pb-0 mb-0"> 
@@ -16,6 +16,14 @@
 import Menu from '../components/menu'
 import SocialLink from '../components/socialLink'
 export default {
+  head: {
+    title: 'my website title',
+    meta: [
+      { charset: 'utf-8' },
+      { name: 'viewport', content: 'width=device-width, initial-scale=1' },
+    ],
+    link: [{ rel: 'stylesheet', href: 'https://fonts.googleapis.com/css2?family=Itim&display=swap' }]
+  },
   components: {
     Menu,
     SocialLink
@@ -30,5 +38,7 @@ a {
 .container {
   height: 90%;
 }
-
+#app {
+  font-family: 'Itim', sans-serif;
+}
 </style>

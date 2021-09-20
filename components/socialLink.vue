@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="mt-16">
     <div class="social-container">
       <a
         class="mr-2"

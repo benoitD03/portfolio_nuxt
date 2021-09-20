@@ -131,5 +131,6 @@ span {
 li {
   list-style-type: none;
   color: #3ebfa6;
+  font-size: 18px;
 }
 </style>

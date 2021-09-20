@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="mb-16">
     <h1 class="text-center my-9"><span>R</span>éalisations</h1>
     <v-carousel style="border-radius: 10px;" height="100%" hide-delimiter-background>
       <v-carousel-item v-for="(project, id) in projects" :key="id">
