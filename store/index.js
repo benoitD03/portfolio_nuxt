@@ -2,7 +2,7 @@ export const state = () => ({
     projects: [
         {
             id: 1,
-            title: "Frontend e-commerce + interface administrateur",
+            title: "e-commerce + interface administrateur",
             description:
               "Réalisation d'un site type e-commerce : développement d'une partie administrateur permettant d'ajouter, modifier et supprimer des articles, et développement de la partie client, avec les fonctionnalités d'ajout et de suppression d'articles dans un panier.",
             image: "/ecommerce.png",

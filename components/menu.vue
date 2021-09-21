@@ -28,15 +28,4 @@ button:hover {
   -o-transform:rotate(360deg) scale(1.2); 
   transform: rotate(360deg) scale(1.2);
 }
-
-@media all and (max-width: 1024px) {
-  button {
-  padding: 5px 13px;
-  box-shadow: none;
-  background: #121212;
-}
-span {
-  color: #3ebfa6; 
-}
-}
 </style>

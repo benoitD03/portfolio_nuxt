@@ -112,7 +112,7 @@ span {
 }
 @media all and (max-width: 670px) {
   h1 {
-    font-size: 30px;
+    font-size: 20px;
   }
   img {
       width: 300px;
