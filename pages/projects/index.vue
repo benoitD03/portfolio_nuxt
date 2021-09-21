@@ -1,7 +1,7 @@
 <template>
   <div class="mb-16">
     <h1 class="text-center my-9"><span>R</span>éalisations</h1>
-    <v-carousel style="border-radius: 10px;" height="100%" hide-delimiter-background>
+    <v-carousel style="border-radius: 10px;" height="100%" hide-delimiter-background show-arrows-on-hover>
       <v-carousel-item v-for="(project, id) in projects" :key="id">
         <v-sheet :project="project" height="100%" tile>
           
@@ -26,11 +26,18 @@ export default {
     return {
       projects : store.getters.getProjects
     }
-  }
+  },
+  transition: {name: "fade"}
 };
 </script>
 
 <style scoped>
+.fade-enter-active {
+    animation: fadeInLeft 1s;
+}
+.fade-leave-active {
+    animation: fadeOutRight 1s;
+}
 a {
   width: 80%;
 }
@@ -75,7 +82,14 @@ span {
   justify-content: center;
   background: #121212;
 }
-.v-carousel__controls {
-  width: 100%;
+@media all and (max-width: 670px) {
+  h3 {
+    font-size: 20px;
+  }
+}
+@media all and (min-width: 1903px) {
+  a {
+    width: 60%;
+  }
 }
 </style>

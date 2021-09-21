@@ -28,21 +28,40 @@ export default {
 .marquee-content {
     display: flex;
     list-style: none;
+    -webkit-animation: scrolling 20s linear infinite;
+    -moz-animation: scrolling 20s linear infinite;
+    -ms-animation: scrolling 20s linear infinite;
+    -o-animation: scrolling 20s linear infinite;
     animation: scrolling 20s linear infinite;
 }
 .marquee-item {
-    width: auto;
     height: 45px;
+    width: auto;
     flex-shrink: 0;
 }
 .marquee-image {
-    width: 100%;
+    width: auto;
     height: 100%;
 }
 
-@keyframes scrolling {
-    0% { transform: translateX(550px);}
-    100% { transform: translateX(-650px);}
+@-webkit-keyframes scrolling {
+    0% { -webkit-transform: translateX(550px);
+         transform: translateX(550px);
+    }
+    100% { -webkit-transform: translateX(-650px);
+           transform: translateX(-650px);
+    }
 }
-
+@media all and (max-width: 600px) {
+  @keyframes scrolling {
+    0% { transform: translateX(450px);}
+    100% { transform: translateX(-650px);}
+  }
+}
+@media all and (max-width: 400px) {
+  @keyframes scrolling {
+    0% { transform: translateX(300px);}
+    100% { transform: translateX(-600px);}
+  }
+}
 </style>

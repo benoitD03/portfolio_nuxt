@@ -58,10 +58,17 @@ export default {
       ),
     };
   },
+  transition: { name: "fade" }
 };
 </script>
 
 <style scoped>
+.fade-enter-active {
+    animation: fadeInLeft 1s;
+}
+.fade-leave-active {
+    animation: fadeOutRight 1s;
+}
 .back-link {
     position: absolute;
     top: 2px;
@@ -91,6 +98,7 @@ span {
 .techno {
     display: flex;
     justify-content: center;
+    flex-wrap: wrap;
     font-size: 20px;
 }
 .projects-links {
@@ -101,5 +109,13 @@ span {
 }
 .projects-links:hover {
     transform: scale(.8);
+}
+@media all and (max-width: 670px) {
+  h1 {
+    font-size: 30px;
+  }
+  img {
+      width: 300px;
+  }
 }
 </style>

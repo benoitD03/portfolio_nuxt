@@ -13,7 +13,6 @@ export default {
 <style scoped>
 span {
   color: #121212; 
-  font-size: 19px;
 }
 button {
   padding: 5px 13px;
@@ -23,11 +22,21 @@ button {
   transition: all .4s ease-in;
 }
 button:hover {
-  -webkit-transform:rotateY(180deg); 
-  -moz-transform:rotateY(180deg); 
-  -ms-transform:rotateY(180deg); 
-  -o-transform:rotateY(180deg); 
-  transform: rotateY(180deg);
+  -webkit-transform:rotate(360deg) scale(1.2); 
+  -moz-transform:rotate(360deg) scale(1.2); 
+  -ms-transform:rotate(360deg) scale(1.2); 
+  -o-transform:rotate(360deg) scale(1.2); 
+  transform: rotate(360deg) scale(1.2);
 }
 
+@media all and (max-width: 1024px) {
+  button {
+  padding: 5px 13px;
+  box-shadow: none;
+  background: #121212;
+}
+span {
+  color: #3ebfa6; 
+}
+}
 </style>

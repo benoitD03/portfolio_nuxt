@@ -62,11 +62,18 @@ import Marquee from '../components/marquee'
 export default {
   components: {
     Marquee
-  }
+  },
+  transition: {name: 'fade'}
 }
 </script>
 
 <style scoped>
+.fade-enter-active {
+    animation: fadeInLeft 1s;
+}
+.fade-leave-active {
+    animation: fadeOutRight 1s;
+}
 h1 {
   font-size: 90px;
 }
@@ -132,5 +139,44 @@ li {
   list-style-type: none;
   color: #3ebfa6;
   font-size: 18px;
+}
+@media all and (max-width: 915px) {
+  h1 {
+    font-size: 60px;
+  }
+  h2 {
+    font-size: 35px;
+  }
+  .links-buttons {
+    flex-direction: column;
+  }
+  button {
+    width: 220px;
+    margin: 20px auto;
+  }
+}
+@media all and (max-width: 600px) {
+  .home {
+    width: 90%;
+    margin-bottom: 40px;
+  }
+  h1 {
+    font-size: 45px;
+  }
+  h2 {
+    font-size: 25px;
+  }
+  .card-text {
+    flex-direction: column;
+  }
+  .button-projects, .button-skills {
+    font-size: 15px;
+    padding: 20px 34px !important;
+  }
+}
+@media all and (min-width: 1903px) {
+  .home {
+    width: 50%;
+  }
 }
 </style>

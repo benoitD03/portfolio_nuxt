@@ -71,10 +71,18 @@
 </template>
 
 <script>
-export default {};
+export default {
+    transition: {name: 'fade'}
+};
 </script>
 
 <style scoped>
+.fade-enter-active {
+    animation: fadeInLeft 1s;
+}
+.fade-leave-active {
+    animation: fadeOutRight 1s;
+}
 span {
     color: #3ebfa6;
 }
