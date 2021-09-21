@@ -42,9 +42,21 @@ export default {};
   position: absolute;
   bottom: 30px;
   right: 20px;
+  transition: transform .3s ease-in;
+}
+.about-link:hover {
+  transform: scale(1.2);
 }
 span {
-  color: #3ebfa6;
-  font-size: 19px;
+  color: #3ebfa6 ;
+  font-size:30px;
+}
+@media all and (max-width: 500px) {
+  span {
+    font-size: 25px;
+  }
+  .about-link {
+    bottom: 32px;
+  }
 }
 </style>

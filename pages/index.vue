@@ -2,7 +2,7 @@
   <div class="contain" align="center" justify="center">
     <div align="center" class="home py-auto">
       <h1 class="text-left"><span>B</span>enoit Durand</h1>
-      <v-divider></v-divider>
+      <v-divider class="divider"></v-divider>
       <h2 class="text-right"><span>D</span>éveloppeur Frontend</h2>
       <div class="links-buttons">
         <v-dialog transition="dialog-bottom-transition" max-width="600">
@@ -139,6 +139,9 @@ li {
   list-style-type: none;
   color: #3ebfa6;
   font-size: 18px;
+}
+.divider {
+  background-color: #3ebfa6;
 }
 @media all and (max-width: 915px) {
   h1 {

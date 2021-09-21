@@ -17,10 +17,11 @@ import Menu from '../components/menu'
 import SocialLink from '../components/socialLink'
 export default {
   head: {
-    title: 'my website title',
+    title: 'Benoit Durand - développeur frontend',
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
+      { name: 'description', content: 'Portfolio de Benoit Durand, développeur frontend'}
     ],
     link: [{ rel: 'stylesheet', href: 'https://fonts.googleapis.com/css2?family=Itim&display=swap' }]
   },

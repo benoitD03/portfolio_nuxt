@@ -9,10 +9,10 @@
     <div class="text-center">
         <v-row justify="center"> 
         <v-col cols="12" lg="6" sm="12" md="12">
-            <img :src="project.image" alt="project.title" />
+            <img class="project-image" :src="project.image" alt="project.title" />
         </v-col>
         <v-col cols="12" lg="6" md="12" sm="12">
-            <img :src="project.image" alt="project.title" />
+            <img class="project-image" :src="project.image2" alt="project.title" />
         </v-col>
         </v-row>
     </div>
@@ -32,6 +32,7 @@
       <div class="text-center links-container">
           <a :href="project.github" target="_blank"><img class="projects-links" src="/github.png"/></a>
           <a v-if="project.link" :href="project.link" target="_blank" class="ml-3"><img class="projects-links" src="/internet.png"/></a>
+          <a v-if="project.youtube" :href="project.youtube" target="_blank" class="ml-3"><img class="projects-links" src="/youtube.png"/></a>
       </div>
       <v-divider class="mt-9"></v-divider>
     </div>
@@ -88,6 +89,9 @@ img {
   width: 500px;
   height: auto;
   border-radius: 10px;
+}
+.project-image {
+    border: 5px solid #3ebfa6;
 }
 .project-container {
   display: flex;
