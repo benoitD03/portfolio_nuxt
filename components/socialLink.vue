@@ -17,7 +17,7 @@
     </div>
     <div class="about-link">
       <NuxtLink to="/about" class="mt-5 mr-5"
-        ><span><b>A propos</b></span></NuxtLink
+        ><span><b>À propos</b></span></NuxtLink
       >
     </div>
   </div>

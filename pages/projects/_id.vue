@@ -52,12 +52,8 @@ export default {
       },
     };
   },
-  async asyncData({ store, route }) {
-    return {
-      project: store.getters.getProjects.find(
-        (project) => project.id === route.params.id
-      ),
-    };
+  asyncData({ store, route }) {
+      return { project : store.getters.getProjects.find(project => project.id === route.params.id)}
   },
   transition: { name: "fade" }
 };

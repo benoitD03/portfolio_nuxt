@@ -15,7 +15,7 @@ export const state = () => ({
             id: 2,
             title: "Réseau social d'entreprise",
             description:
-              "Réalisation d'un réseau social, avec la gestion des utilisateurs ( connexion, inscription, modifications et suppressions de profil, possibilité aux admin de supprimer d'autres utilisateurs, etc ), et partage de posts sur un fil d'actualité ( avec également la possibilité aux admin de supprimer tous les posts des utilisateurs )",
+              "Réalisation d'un réseau social, avec la gestion des utilisateurs ( connexion, inscription, modification et suppression de profil, possibilité aux admins de supprimer d'autres utilisateurs, etc ), et partage de posts sur un fil d'actualité ( avec également la possibilité aux admin de supprimer tous les posts des utilisateurs )",
             image: "/groupomania.png",
             image2: "/groupomania2.png",
             technos: ["Vue.js", "Vuetify", "Node.js", "MySQL", "Sequelize"],

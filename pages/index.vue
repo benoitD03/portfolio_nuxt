@@ -1,5 +1,6 @@
 <template>
   <div class="contain" align="center" justify="center">
+    <AnimateBackground />
     <div align="center" class="home py-auto">
       <h1 class="text-left"><span>B</span>enoit Durand</h1>
       <v-divider class="divider"></v-divider>
@@ -58,10 +59,12 @@
 </template>
 
 <script>
-import Marquee from '../components/marquee'
+import Marquee from '../components/marquee';
+import AnimateBackground from '../components/animateBackground'
 export default {
   components: {
-    Marquee
+    Marquee,
+    AnimateBackground
   },
   transition: {name: 'fade'}
 }

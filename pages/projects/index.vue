@@ -22,7 +22,12 @@
 
 <script>
 export default {
-  async asyncData({ store }) {
+  data() {
+    return {
+      projects: []
+    }
+  },
+  asyncData({ store }) {
     return {
       projects : store.getters.getProjects
     }
