@@ -31,6 +31,7 @@
       <h3 class="text-center my-9"><span>I</span>nformations supplémentaires</h3>
       <div class="text-center links-container">
           <a :href="project.github" target="_blank"><img class="projects-links" src="/github.png"/></a>
+          <a v-if="project.github2" :href="project.github2" target="_blank" class="ml-3"><img class="projects-links" src="/github2.png"/></a>
           <a v-if="project.link" :href="project.link" target="_blank" class="ml-3"><img class="projects-links" src="/internet.png"/></a>
           <a v-if="project.youtube" :href="project.youtube" target="_blank" class="ml-3"><img class="projects-links" src="/youtube.png"/></a>
       </div>
